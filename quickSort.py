@@ -10,7 +10,19 @@ def quick_sort(arr):
     return quick_sort(left) + middle + quick_sort(right)  # Recursively calling the function on the left and right list and returning the merged value.
 
 
+list = []  # Initialising an empty list
 
-my_list = [3, 6,2,18,19,17,99, 8, 10, 1, 2, 1]
-sorted_list = quick_sort(my_list)
-print(sorted_list)
+while True:  # A loop to add values in the empty list
+    user_input = input("Enter a number (or 'x' to finish): ")  # entering a number
+
+    if user_input.lower() == 'x':  # Adding a break condition to exit the loop
+        break
+
+    try:   # Using try and exception to finally append the number in the list
+        number = int(user_input)
+        list.append(number)
+    except ValueError:  # Except is used in case the user inputs some string or other invalid characters.
+        print("Invalid input. Please enter a valid number or 'x' to finish.")
+
+sorted_list = quick_sort(list)
+print("Sorted list:", sorted_list)
