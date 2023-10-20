@@ -1,3 +1,12 @@
+'''
+Problem Statement
+You are given an unsorted list of integers. Your task is to implement the Quick Sort algorithm to sort the list in ascending order.
+
+Write a Python function quick_sort(arr) that takes an unsorted list arr of integers and returns a new list with the same elements sorted in ascending order using the Quick Sort algorithm. Your function should not modify the original list but create and return a new sorted list.
+
+Your implementation should be based on the Quick Sort algorithm and should have a time complexity of O(n log n) on average.
+'''
+
 def quick_sort(arr):
     if len(arr) <= 1:
         return arr
@@ -13,7 +22,7 @@ def quick_sort(arr):
 list = []  # Initialising an empty list
 
 while True:  # A loop to add values in the empty list
-    user_input = input("Enter a number (or 'x' to finish): ")  # entering a number
+    user_input = input("Enter a number (or 'x' to finish): ")  # Enter a number
 
     if user_input.lower() == 'x':  # Adding a break condition to exit the loop
         break
